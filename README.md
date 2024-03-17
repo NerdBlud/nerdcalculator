@@ -10,7 +10,7 @@ This is a simple calculator project built using HTML, CSS, and JavaScript.
 
 ## Demo
 
-You can see a live demo of the calculator [nerdcalculator.netlify.app](#).
+You can see a live demo of the calculator [here](nerdcalculator.netlify.app).
 
 ## Getting Started
 
@@ -31,4 +31,4 @@ Contributions are welcome! Please fork the repository and submit a pull request.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT License - see the [LICENSE.md]() file for details.
