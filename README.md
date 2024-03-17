@@ -10,7 +10,7 @@ This is a simple calculator project built using HTML, CSS, and JavaScript.
 
 ## Demo
 
-You can see a live demo of the calculator [here](nerdcalculator.netlify.app).
+You can see a live demo of the calculator [here](https://nerdcalculator.netlify.app).
 
 ## Getting Started
 
