@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+
+<body class="flex justify-center items-center h-screen bg-gradient-to-b from-yellow-300 via-yellow-400 to-yellow-500 bg-no-repeat bg-cover bg-center">  
+        <div class="calculator bg-white rounded-lg p-8 shadow-md">
+            <a href="https://www.youtube.com/channel/UCxC32Ph9GupmQ4daLxzqewQ/" target="_blank" class="flex justify-center items-center transform hover:scale-90 transition-transform">
+                <img src="https://media.tenor.com/Zb99MhmJebEAAAAj/nerd-emoji.gif" alt=""  />
+            </a>
+    <input id="input" class="input-field mb-4 px-2 py-1 border rounded-md border-gray-400" type="text" readonly />
+        <div class="grid grid-cols-4 gap-2">
+            <button
+                class="button bg-gray-200 text-gray-800 border border-gray-300 rounded-md py-2 px-4 hover:bg-gray-300"
+                onclick="addToInput('7')">
+                7
+            </button>
+            <button
+                class="button bg-gray-200 text-gray-800 border border-gray-300 rounded-md py-2 px-4 hover:bg-gray-300"
+                onclick="addToInput('8')">
+                8
+            </button>
+            <button
+                class="button bg-gray-200 text-gray-800 border border-gray-300 rounded-md py-2 px-4 hover:bg-gray-300"
+                onclick="addToInput('9')">
+                9
+            </button>
+            <button
+                class="button bg-gray-200 text-gray-800 border border-gray-300 rounded-md py-2 px-4 hover:bg-gray-300"
+                onclick="addToInput('/')">
+                /
+            </button>
+
+            <button
+                class="button bg-gray-200 text-gray-800 border border-gray-300 rounded-md py-2 px-4 hover:bg-gray-300"
+                onclick="addToInput('4')">
+                4
+            </button>
+            <button
+                class="button bg-gray-200 text-gray-800 border border-gray-300 rounded-md py-2 px-4 hover:bg-gray-300"
+                onclick="addToInput('5')">
+                5
+            </button>
+            <button
+                class="button bg-gray-200 text-gray-800 border border-gray-300 rounded-md py-2 px-4 hover:bg-gray-300"
+                onclick="addToInput('6')">
+                6
+            </button>
+            <button
+                class="button bg-gray-200 text-gray-800 border border-gray-300 rounded-md py-2 px-4 hover:bg-gray-300"
+                onclick="addToInput('*')">
+                x
+            </button>
+
+            <button
+                class="button bg-gray-200 text-gray-800 border border-gray-300 rounded-md py-2 px-4 hover:bg-gray-300"
+                onclick="addToInput('1')">
+                1
+            </button>
+            <button
+                class="button bg-gray-200 text-gray-800 border border-gray-300 rounded-md py-2 px-4 hover:bg-gray-300"
+                onclick="addToInput('2')">
+                2
+            </button>
+            <button
+                class="button bg-gray-200 text-gray-800 border border-gray-300 rounded-md py-2 px-4 hover:bg-gray-300"
+                onclick="addToInput('3')">
+                3
+            </button>
+            <button
+                class="button bg-gray-200 text-gray-800 border border-gray-300 rounded-md py-2 px-4 hover:bg-gray-300"
+                onclick="addToInput('-')">
+                -
+            </button>
+
+            <button
+                class="button bg-gray-200 text-gray-800 border border-gray-300 rounded-md py-2 px-4 hover:bg-gray-300"
+                onclick="addToInput('0')">
+                0
+            </button>
+            <button
+                class="button bg-gray-200 text-gray-800 border border-gray-300 rounded-md py-2 px-4 hover:bg-gray-300"
+                onclick="addToInput('.')">
+                .
+            </button>
+            <button
+                class="button bg-gray-200 text-gray-800 border border-gray-300 rounded-md py-2 px-4 hover:bg-gray-300"
+                onclick="clearInput()">
+                C
+            </button>
+            <button
+                class="button bg-gray-200 text-gray-800 border border-gray-300 rounded-md py-2 px-4 hover:bg-gray-300"
+                onclick="addToInput('+')">
+                +
+            </button>
+        </div>
+        <button
+            class="button bg-gray-200 text-gray-800 border border-gray-300 rounded-md py-2 px-4 hover:bg-gray-300 w-full mt-4"
+            onclick="calculate()">
+            =
+        </button>
+    </div>
+</body>
+
+
+    <script>
+        function addToInput(value) {
+            document.getElementById("input").value += value;
+        }
+
+        function clearInput() {
+            document.getElementById("input").value = "";
+        }
+
+        function calculate() {
+            let input = document.getElementById("input").value;
+            let result;
+            try {
+                result = eval(input);
+            } catch (e) {
+                result = "Error";
+            }
+            document.getElementById("input").value = result;
+        }
+    </script>
+</body>
+
+</html>
